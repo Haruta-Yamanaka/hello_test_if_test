@@ -20,7 +20,7 @@ public class NetproLabMember {
       int StudentOfMen = data[i][student]*(100-data[i][percentOfWomen])/100;
       probability[i] = 1;
       for(int m = 0;m<data[i][IwaiKen];m++){
-        probability[i] *= (float)StudentOfMen/(float)data[i][student];
+        probability[i] *= (float)(StudentOfMen-m)/(float)data[i][student];
       }
       System.out.println((i+1)+"年目:"+"学生総数 "+data[i][student] +"人　"+"女子生徒の割合 "+data[i][percentOfWomen]+"％　"+"岩井研の配属人数 "+data[i][IwaiKen]+"人");
       System.out.println("岩井研に女子が来ない確率: "+probability[i]*100+"％");
